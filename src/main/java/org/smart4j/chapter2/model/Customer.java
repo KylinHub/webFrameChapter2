@@ -18,6 +18,9 @@ public class Customer {
   // 电话号码
   private String telephone;
 
+  // Email
+  private String email;
+
   // 备注
   private String remark;
 
@@ -51,6 +54,14 @@ public class Customer {
 
   public void setTelephone(String telephone) {
     this.telephone = telephone;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
   }
 
   public String getRemark() {

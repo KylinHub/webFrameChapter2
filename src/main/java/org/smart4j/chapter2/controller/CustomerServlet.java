@@ -7,14 +7,14 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by 28016 on 2017/11/19.
- * 创建客户
+ * 客户列表
  */
 
-@WebServlet("/customer_create")
-public class CustomerCreateServlet extends javax.servlet.http.HttpServlet {
+@WebServlet("/customer")
+public class CustomerServlet extends javax.servlet.http.HttpServlet {
 
   /**
-   * 进入 创建客户 界面
+   * 进入 客户列表 界面
    * @param req
    * @param res
    * @throws javax.servlet.ServletException
@@ -27,7 +27,7 @@ public class CustomerCreateServlet extends javax.servlet.http.HttpServlet {
   }
 
   /**
-   * 处理 创建客户 请求
+   * 处理 客户列表 界面
    * @param req
    * @param res
    * @throws javax.servlet.ServletException
