@@ -10,6 +10,7 @@ public final class StringUtil {
 
   /**
    * 判断字符串是否为空
+   *
    * @param str
    * @return
    */
@@ -20,6 +21,12 @@ public final class StringUtil {
     return StringUtils.isEmpty(str);
   }
 
+  /**
+   * 判断字符串是否非空
+   *
+   * @param str
+   * @return
+   */
   public static boolean isNotEmpty(String str) {
     return !isEmpty(str);
   }

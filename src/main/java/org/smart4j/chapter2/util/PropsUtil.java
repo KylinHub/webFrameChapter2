@@ -13,10 +13,11 @@ import org.slf4j.LoggerFactory;
  */
 public final class PropsUtil {
 
-  private static final Logger LOGGER= LoggerFactory.getLogger(PropsUtil.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(PropsUtil.class);
 
   /**
    * 加载属性文件
+   *
    * @param fileName
    * @return
    */
@@ -29,7 +30,7 @@ public final class PropsUtil {
         throw new FileNotFoundException(fileName + "file is not found");
       }
       props = new Properties();
-      props.loadFromXML(is);
+      props.load(is);
     } catch (IOException e) {
       LOGGER.error("load properties file failer", e);
     } finally {
@@ -46,6 +47,7 @@ public final class PropsUtil {
 
   /**
    * 获取字符型属性（默认值为空字符串）
+   *
    * @param props
    * @param key
    * @return
@@ -56,6 +58,7 @@ public final class PropsUtil {
 
   /**
    * 获取字符型属性（可指定默认值）
+   *
    * @param props
    * @param key
    * @param defaultValue
@@ -71,16 +74,18 @@ public final class PropsUtil {
 
   /**
    * 获取数值型属性（默认值为0）
+   *
    * @param props
    * @param key
    * @return
    */
-  public static int getInt (Properties props, String key) {
+  public static int getInt(Properties props, String key) {
     return getInt(props, key, 0);
   }
 
   /**
    * 获取数值型属性（可指定默认值）
+   *
    * @param props
    * @param key
    * @param defaultValue
@@ -96,6 +101,7 @@ public final class PropsUtil {
 
   /**
    * 获取布尔值属性（默认值为false）
+   *
    * @param props
    * @param key
    * @return
@@ -106,6 +112,7 @@ public final class PropsUtil {
 
   /**
    * 获取布尔值属性（可指定默认值）
+   *
    * @param props
    * @param defaultValue
    * @return

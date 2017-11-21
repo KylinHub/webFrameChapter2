@@ -1,7 +1,9 @@
 package org.smart4j.chapter2.controller;
 
 import java.io.IOException;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,10 +13,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 
 @WebServlet("/customer_show")
-public class CustomerShowServlet extends javax.servlet.http.HttpServlet {
+public class CustomerShowServlet extends HttpServlet {
 
   /**
    * 进入 客户详情 界面
+   *
    * @param req
    * @param res
    * @throws javax.servlet.ServletException
@@ -22,12 +25,13 @@ public class CustomerShowServlet extends javax.servlet.http.HttpServlet {
    */
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse res)
-      throws javax.servlet.ServletException, IOException {
+      throws ServletException, IOException {
     //TODO
   }
 
   /**
    * 处理 客户详情 请求
+   *
    * @param req
    * @param res
    * @throws javax.servlet.ServletException
@@ -35,7 +39,7 @@ public class CustomerShowServlet extends javax.servlet.http.HttpServlet {
    */
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse res)
-      throws javax.servlet.ServletException, IOException {
+      throws ServletException, IOException {
     //TODO
   }
 }

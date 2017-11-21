@@ -1,9 +1,9 @@
 package org.smart4j.chapter2.util;
 
-    import java.util.Collection;
-    import java.util.Map;
-    import org.apache.commons.collections4.CollectionUtils;
-    import org.apache.commons.collections4.MapUtils;
+import java.util.Collection;
+import java.util.Map;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.collections4.MapUtils;
 
 /**
  * Created by 28016 on 2017/11/20.
@@ -13,6 +13,7 @@ public final class CollectionUtil {
 
   /**
    * 判断Collection是否为空
+   *
    * @param collection
    * @return
    */
@@ -22,6 +23,7 @@ public final class CollectionUtil {
 
   /**
    * 判断Collection是否非空
+   *
    * @param collection
    * @return
    */
@@ -31,6 +33,7 @@ public final class CollectionUtil {
 
   /**
    * 判断Map是否为空
+   *
    * @param map
    * @return
    */
@@ -40,6 +43,7 @@ public final class CollectionUtil {
 
   /**
    * 判断Map是否非空
+   *
    * @param map
    * @return
    */

@@ -1,11 +1,16 @@
 package org.smart4j.chapter2.test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.smart4j.chapter2.helper.DatabaseHelper;
 import org.smart4j.chapter2.model.Customer;
 import org.smart4j.chapter2.services.CustomerService;
 
@@ -22,14 +27,15 @@ public class CustomerServiceTest {
   }
 
   @Before
-  public void init() {
-    //TODO 初始化数据库
+  public void init() throws IOException {
+    // 初始化数据库
+    DatabaseHelper.executeSqlFile("sql/customer_init.sql");
   }
 
   @Test
   public void getCustomerListTest() throws Exception {
     String keyword = "";
-    List<Customer> customerList = customerService.getCustomerList(keyword);
+    List<Customer> customerList = customerService.getCustomerList();
     Assert.assertEquals(2, customerList.size());
   }
 
@@ -45,7 +51,7 @@ public class CustomerServiceTest {
     Map<String, Object> fieldMap = new HashMap<String, Object>();
     fieldMap.put("name", "customer100");
     fieldMap.put("contact", "John");
-    fieldMap.put("telephone", "13512345678");
+    fieldMap.put("telephone", "13734567890");
     boolean result = customerService.createCustomer(fieldMap);
     Assert.assertTrue(result);
   }
